@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B64DE2AA-3CC7-4889-8501-6F39CC443E4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{3FA4469E-7BBA-42FB-920D-58E7E2B8AE32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", "{29E9000A-76E6-4B11-B02E-A24F26B84A60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{53E6B8E5-A5D6-4EE8-8730-FB6DD6E099D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCRUD.View", "DemoCRUD.View\DemoCRUD.View.csproj", "{7D9E126D-49E9-4269-B804-C8827A50CB75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCRUD.Model", "DemoCRUD.Model\DemoCRUD.Model.csproj", "{655D1614-C61B-41B4-AAB2-6D2D3A41D7A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCRUD.Controller", "DemoCRUD.Controller\DemoCRUD.Controller.csproj", "{27E38435-ACFA-4633-A2DE-671D4652ED27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D9E126D-49E9-4269-B804-C8827A50CB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9E126D-49E9-4269-B804-C8827A50CB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9E126D-49E9-4269-B804-C8827A50CB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9E126D-49E9-4269-B804-C8827A50CB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655D1614-C61B-41B4-AAB2-6D2D3A41D7A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655D1614-C61B-41B4-AAB2-6D2D3A41D7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655D1614-C61B-41B4-AAB2-6D2D3A41D7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655D1614-C61B-41B4-AAB2-6D2D3A41D7A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27E38435-ACFA-4633-A2DE-671D4652ED27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E38435-ACFA-4633-A2DE-671D4652ED27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E38435-ACFA-4633-A2DE-671D4652ED27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E38435-ACFA-4633-A2DE-671D4652ED27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3FA4469E-7BBA-42FB-920D-58E7E2B8AE32} = {B64DE2AA-3CC7-4889-8501-6F39CC443E4F}
+		{29E9000A-76E6-4B11-B02E-A24F26B84A60} = {B64DE2AA-3CC7-4889-8501-6F39CC443E4F}
+		{53E6B8E5-A5D6-4EE8-8730-FB6DD6E099D9} = {B64DE2AA-3CC7-4889-8501-6F39CC443E4F}
+		{7D9E126D-49E9-4269-B804-C8827A50CB75} = {3FA4469E-7BBA-42FB-920D-58E7E2B8AE32}
+		{655D1614-C61B-41B4-AAB2-6D2D3A41D7A7} = {53E6B8E5-A5D6-4EE8-8730-FB6DD6E099D9}
+		{27E38435-ACFA-4633-A2DE-671D4652ED27} = {29E9000A-76E6-4B11-B02E-A24F26B84A60}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5550C0B-7F8D-4464-A515-BF40EB984641}
+	EndGlobalSection
+EndGlobal
