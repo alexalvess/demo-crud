@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,8 @@ namespace DemoCRUD.Controller.Data
 {
     public class Context : IDisposable
     {
-        private const string _databasePath = @"E:\Curso-Udemy\demo-crud.s3db";
+        private string _databasePath = $"{AppDomain.CurrentDomain.BaseDirectory}demo-crud.s3db";
+
         private SQLiteConnection Connection { get; set; }
 
         public SQLiteCommand Command { get; private set; }

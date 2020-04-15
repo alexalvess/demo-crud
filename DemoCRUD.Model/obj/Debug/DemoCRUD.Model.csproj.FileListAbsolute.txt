@@ -4,3 +4,9 @@ E:\Projects\Course\Jeh\1. Projeto Modelo\DemoCRUD\DemoCRUD.Model\obj\Debug\DemoC
 E:\Projects\Course\Jeh\1. Projeto Modelo\DemoCRUD\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.csproj.CoreCompileInputs.cache
 E:\Projects\Course\Jeh\1. Projeto Modelo\DemoCRUD\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.dll
 E:\Projects\Course\Jeh\1. Projeto Modelo\DemoCRUD\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.pdb
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\bin\Debug\DemoCRUD.Model.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\bin\Debug\DemoCRUD.Model.pdb
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.csprojAssemblyReference.cache
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.csproj.CoreCompileInputs.cache
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.pdb

@@ -24,3 +24,29 @@ E:\Projects\Course\Jeh\1. Projeto Modelo\DemoCRUD\DemoCRUD.View\bin\Debug\Entity
 E:\Projects\Course\Jeh\1. Projeto Modelo\DemoCRUD\DemoCRUD.View\bin\Debug\EntityFramework.SqlServer.xml
 E:\Projects\Course\Jeh\1. Projeto Modelo\DemoCRUD\DemoCRUD.View\obj\Debug\DemoCRUD.View.Detalhe.resources
 E:\Projects\Course\Jeh\1. Projeto Modelo\DemoCRUD\DemoCRUD.View\obj\Debug\DemoCRUD.View.Home.resources
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\DemoCRUD.View.exe.config
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\DemoCRUD.View.exe
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\DemoCRUD.View.pdb
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\DemoCRUD.Controller.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\DemoCRUD.Model.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\EntityFramework.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\EntityFramework.SqlServer.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\System.Data.SQLite.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\System.Data.SQLite.EF6.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\System.Data.SQLite.Linq.dll
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\DemoCRUD.Controller.pdb
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\DemoCRUD.Controller.dll.config
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\DemoCRUD.Model.pdb
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\EntityFramework.xml
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\EntityFramework.SqlServer.xml
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\System.Data.SQLite.xml
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\bin\Debug\System.Data.SQLite.dll.config
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.csprojAssemblyReference.cache
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.Detalhe.resources
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.Home.resources
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.Properties.Resources.resources
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.csproj.GenerateResource.cache
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.csproj.CoreCompileInputs.cache
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.csproj.CopyComplete
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.exe
+D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.View\obj\Debug\DemoCRUD.View.pdb
