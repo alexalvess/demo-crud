@@ -35,40 +35,23 @@ namespace DemoCRUD.View
             StatusCampoBotao();
             StatusCampoTexto(false);
 
-            InicializarListView();
+            InicializarDataDrid();
             CarregarListView();
         }
 
-        #region Funcionalidades
-        private void InicializarListView()
+        private void InicializarDataDrid()
         {
-            listView1.View = System.Windows.Forms.View.Details;
-            listView1.LabelEdit = false;
-            listView1.AllowColumnReorder = true;
-            listView1.FullRowSelect = true;
-            listView1.GridLines = true;
-
-            listView1.Columns.Add("ID", 50, HorizontalAlignment.Right);
-            listView1.Columns.Add("CPF", 100, HorizontalAlignment.Right);
-            listView1.Columns.Add("Nome", 300, HorizontalAlignment.Left);
-            listView1.Columns.Add("Data de Nascimento", 150, HorizontalAlignment.Right);
         }
 
+        #region Funcionalidades
         private void CarregarListView()
         {
             clientes = service.RecuperarTodos();
+            dataGridView1.DataSource = clientes;
 
-            listView1.Items.Clear();
-
-            for (int i = 0; i < clientes.Count; i++)
-            {
-                ListViewItem lvi = new ListViewItem(clientes[i].Id.ToString());
-                lvi.SubItems.Add(clientes[i].Cpf);
-                lvi.SubItems.Add(clientes[i].Nome);
-                lvi.SubItems.Add(clientes[i].DataNascimento.ToString("dd/MM/yyyy"));
-
-                listView1.Items.Add(lvi);
-            }
+            dataGridView1.Columns[4].DisplayIndex = 0;
+            dataGridView1.Columns[0].DisplayIndex = 1;
+            dataGridView1.Columns[1].DisplayIndex = 2;
         }
         #endregion
 
@@ -175,16 +158,16 @@ namespace DemoCRUD.View
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Count == 0)
-                return;
+            //if (listView1.SelectedItems.Count == 0)
+            //    return;
 
-            ListViewItem item = listView1.SelectedItems[0];
+            //ListViewItem item = listView1.SelectedItems[0];
 
-            cliente = clientes.Find(f => f.Id == Convert.ToInt32(item.SubItems[0].Text));
+            //cliente = clientes.Find(f => f.Id == Convert.ToInt32(item.SubItems[0].Text));
 
-            txtNome.Text = cliente.Nome;
-            txtCpf.Text = cliente.Cpf;
-            txtNascimento.Text = cliente.DataNascimento.ToString("dd/MM/yyyy");
+            //txtNome.Text = cliente.Nome;
+            //txtCpf.Text = cliente.Cpf;
+            //txtNascimento.Text = cliente.DataNascimento.ToString("dd/MM/yyyy");
         }
     }
 }
