@@ -152,20 +152,6 @@ namespace DemoCRUD.View
         }
         #endregion
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //if (listView1.SelectedItems.Count == 0)
-            //    return;
-
-            //ListViewItem item = listView1.SelectedItems[0];
-
-            //cliente = clientes.Find(f => f.Id == Convert.ToInt32(item.SubItems[0].Text));
-
-            //txtNome.Text = cliente.Nome;
-            //txtCpf.Text = cliente.Cpf;
-            //txtNascimento.Text = cliente.DataNascimento.ToString("dd/MM/yyyy");
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.ColumnIndex == dataGridView1.Columns["Delete"].Index)
