@@ -89,7 +89,6 @@ namespace DemoCRUD.View
         {
             btnNovo.Enabled = !inserir && !alterar;
             btnAlterar.Enabled = !inserir && !alterar;
-            btnExibir.Enabled = !inserir && !alterar;
             btnSalvar.Enabled = inserir || alterar;
             btnCancelar.Enabled = inserir || alterar;
         }
@@ -145,14 +144,6 @@ namespace DemoCRUD.View
             AcaoComum();
 
             CarregarListView();
-        }
-
-        private void btnExibir_Click(object sender, EventArgs e)
-        {
-            AcaoComum();
-
-            var detalhe = new Detalhe(cliente);
-            detalhe.ShowDialog();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
