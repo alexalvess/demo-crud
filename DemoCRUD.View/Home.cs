@@ -18,7 +18,6 @@ namespace DemoCRUD.View
         private ClienteService service;
 
         private List<Cliente> clientes;
-        private Cliente cliente;
 
         private bool inserir;
         private bool alterar;
