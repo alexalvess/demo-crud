@@ -114,33 +114,19 @@ namespace DemoCRUD.View
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (inserir)
+            service.Inserir(new Cliente
             {
-                service.Inserir(new Cliente
-                {
-                    DataNascimento = DateTime.ParseExact(txtNascimento.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    Cpf = txtCpf.Text,
-                    Nome = txtNome.Text
-                });
-            }
-            else if (alterar)
-            {
-                cliente.Nome = txtNome.Text;
-                cliente.Cpf = txtCpf.Text;
-                cliente.DataNascimento = DateTime.ParseExact(txtNascimento.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
-                service.Alterar(cliente);
-            }
+                DataNascimento = DateTime.ParseExact(txtNascimento.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                Cpf = txtCpf.Text,
+                Nome = txtNome.Text
+            });
 
             AcaoComum();
-
             CarregarListView();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            AcaoComum();
-        }
+            => AcaoComum();
         #endregion
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
