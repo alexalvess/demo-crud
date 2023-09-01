@@ -66,7 +66,7 @@ namespace DemoCRUD.View
                 dataGridView1.Columns.Add(detalhe_btn);
 
             dataGridView1.Columns["Id"].Visible = false;
-            dataGridView1.CancelEdit();
+            dataGridView1.Columns["DataRegistro"].ReadOnly = true;
         }
         #endregion
 
@@ -160,24 +160,17 @@ namespace DemoCRUD.View
         private void excluirCliente(int id)
         {
             service.Deletar(id);
-
-            AcaoComum();
-
             CarregarListView();
         }
 
         private void detalharCliente(int id)
         {
             AcaoComum();
-
             var detalhe = new Detalhe(clientes.First(x => x.Id == id));
             detalhe.ShowDialog();
         }
 
         private void alterarCliente(int id)
-        {
-            var cliente = clientes.First(c => c.Id == id);
-            service.Alterar(cliente);
-        }
+            => service.Alterar(clientes.First(c => c.Id == id));
     }
 }
