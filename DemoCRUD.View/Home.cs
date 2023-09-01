@@ -34,12 +34,7 @@ namespace DemoCRUD.View
             StatusCampoBotao();
             StatusCampoTexto(false);
 
-            InicializarDataDrid();
             CarregarListView();
-        }
-
-        private void InicializarDataDrid()
-        {
         }
 
         #region Funcionalidades
