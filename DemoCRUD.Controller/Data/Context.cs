@@ -40,7 +40,7 @@ namespace DemoCRUD.Controller.Data
             string sql = @"CREATE TABLE IF NOT EXISTS Cliente(
 							Id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
 							Nome NVARCHAR(100) NULL,
-							Cpf NVARCHAR(11) NULL,
+							Cpf NVARCHAR(14) NULL,
 							DataNascimento DATE NULL,
 							DataRegistro DATETIME NULL
 						);";

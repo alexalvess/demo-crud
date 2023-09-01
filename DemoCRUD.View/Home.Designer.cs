@@ -32,12 +32,12 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
-            this.txtNascimento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mtxCpf = new System.Windows.Forms.MaskedTextBox();
+            this.mtxDataNascimento = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             this.btnNovo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(36, 28);
-            this.btnNovo.TabIndex = 0;
+            this.btnNovo.TabIndex = 4;
             this.btnNovo.Text = "➕";
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -58,7 +58,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(36, 28);
-            this.btnSalvar.TabIndex = 2;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "✔️";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -69,7 +69,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(36, 28);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "❌";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -80,23 +80,7 @@
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(132, 22);
-            this.txtNome.TabIndex = 6;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Location = new System.Drawing.Point(154, 25);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(132, 22);
-            this.txtCpf.TabIndex = 7;
-            // 
-            // txtNascimento
-            // 
-            this.txtNascimento.Location = new System.Drawing.Point(296, 25);
-            this.txtNascimento.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNascimento.Name = "txtNascimento";
-            this.txtNascimento.Size = new System.Drawing.Size(132, 22);
-            this.txtNascimento.TabIndex = 8;
+            this.txtNome.TabIndex = 1;
             // 
             // label1
             // 
@@ -141,17 +125,33 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
+            // mtxCpf
+            // 
+            this.mtxCpf.Location = new System.Drawing.Point(152, 24);
+            this.mtxCpf.Mask = "000.000.000-00";
+            this.mtxCpf.Name = "mtxCpf";
+            this.mtxCpf.Size = new System.Drawing.Size(137, 22);
+            this.mtxCpf.TabIndex = 2;
+            // 
+            // mtxDataNascimento
+            // 
+            this.mtxDataNascimento.Location = new System.Drawing.Point(295, 24);
+            this.mtxDataNascimento.Mask = "00/00/0000";
+            this.mtxDataNascimento.Name = "mtxDataNascimento";
+            this.mtxDataNascimento.Size = new System.Drawing.Size(131, 22);
+            this.mtxDataNascimento.TabIndex = 3;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 362);
+            this.Controls.Add(this.mtxDataNascimento);
+            this.Controls.Add(this.mtxCpf);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNascimento);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -172,11 +172,11 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.TextBox txtNascimento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MaskedTextBox mtxCpf;
+        private System.Windows.Forms.MaskedTextBox mtxDataNascimento;
     }
 }

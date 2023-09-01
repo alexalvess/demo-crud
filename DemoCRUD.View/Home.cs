@@ -68,15 +68,15 @@ namespace DemoCRUD.View
         private void LimparCampoTexto()
         {
             txtNome.Clear();
-            txtCpf.Clear();
-            txtNascimento.Clear();
+            mtxCpf.Clear();
+            mtxDataNascimento.Clear();
         }
 
         private void StatusCampoTexto(bool flag)
         {
             txtNome.Enabled = flag;
-            txtCpf.Enabled = flag;
-            txtNascimento.Enabled = flag;
+            mtxCpf.Enabled = flag;
+            mtxDataNascimento.Enabled = flag;
         }
 
         private void StatusCampoBotao()
@@ -110,8 +110,8 @@ namespace DemoCRUD.View
         {
             service.Inserir(new Cliente
             {
-                DataNascimento = DateTime.ParseExact(txtNascimento.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                Cpf = txtCpf.Text,
+                DataNascimento = DateTime.ParseExact(mtxDataNascimento.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                Cpf = mtxCpf.Text,
                 Nome = txtNome.Text
             });
 
@@ -133,9 +133,7 @@ namespace DemoCRUD.View
         }
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            alterarCliente((int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
-        }
+            => alterarCliente((int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
 
         private void excluirCliente(int id)
         {
