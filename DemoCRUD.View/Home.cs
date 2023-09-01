@@ -88,7 +88,6 @@ namespace DemoCRUD.View
         private void StatusCampoBotao()
         {
             btnNovo.Enabled = !inserir && !alterar;
-            btnAlterar.Enabled = !inserir && !alterar;
             btnSalvar.Enabled = inserir || alterar;
             btnCancelar.Enabled = inserir || alterar;
         }
@@ -111,14 +110,6 @@ namespace DemoCRUD.View
             StatusCampoBotao();
             StatusCampoTexto(true);
             LimparCampoTexto();
-        }
-
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
-            alterar = true;
-
-            StatusCampoBotao();
-            StatusCampoTexto(true);
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -161,6 +152,11 @@ namespace DemoCRUD.View
                 detalharCliente((int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
         }
 
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            alterarCliente((int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+        }
+
         private void excluirCliente(int id)
         {
             service.Deletar(id);
@@ -176,6 +172,12 @@ namespace DemoCRUD.View
 
             var detalhe = new Detalhe(clientes.First(x => x.Id == id));
             detalhe.ShowDialog();
+        }
+
+        private void alterarCliente(int id)
+        {
+            var cliente = clientes.First(c => c.Id == id);
+            service.Alterar(cliente);
         }
     }
 }
