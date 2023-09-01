@@ -108,6 +108,9 @@ namespace DemoCRUD.View
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos())
+                return;
+
             service.Inserir(new Cliente
             {
                 DataNascimento = DateTime.ParseExact(mtxDataNascimento.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
@@ -134,6 +137,30 @@ namespace DemoCRUD.View
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
             => alterarCliente((int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNome.Text) || txtNome.Text.Length < 3)
+                return ExibirAlerta("É obrigatório informar o nome do cliente.");
+            else if (txtNome.Text.Length < 3)
+                return ExibirAlerta("O nome do cliente deve conter mais do que 2 caracteres.");
+            else if (string.IsNullOrWhiteSpace(mtxCpf.Text))
+                return ExibirAlerta("O CPF do cliente deve ser informado.");
+            else if (mtxCpf.Text.Length != 14)
+                return ExibirAlerta("O CPF do cliente está incompleto");
+            else if (string.IsNullOrWhiteSpace(mtxDataNascimento.Text))
+                return ExibirAlerta("A data de nascimento do cliente deve ser informada");
+            else if (!DateTime.TryParse(mtxDataNascimento.Text, out DateTime data))
+                return ExibirAlerta("Informe uma data de nascimento válida.");
+
+            return true;
+        }
+
+        private bool ExibirAlerta(string mensagem)
+        {
+            MessageBox.Show(mensagem, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return false;
+        }
 
         private void excluirCliente(int id)
         {
