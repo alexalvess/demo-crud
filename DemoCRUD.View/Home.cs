@@ -50,14 +50,23 @@ namespace DemoCRUD.View
             dataGridView1.DataSource = clientes;
 
             var delete_btn = new DataGridViewButtonColumn();
-            delete_btn.Name = "Delete";
-            delete_btn.Text = "X";
+            delete_btn.Name = "Remover";
+            delete_btn.Text = "❌";
             delete_btn.UseColumnTextForButtonValue = true;
 
-            if (dataGridView1.Columns["Delete"] is null)
+            var detalhe_btn = new DataGridViewButtonColumn();
+            detalhe_btn.Name = "Detalhar";
+            detalhe_btn.Text = "📃";
+            detalhe_btn.UseColumnTextForButtonValue = true;
+
+            if (dataGridView1.Columns["Remover"] is null)
                 dataGridView1.Columns.Add(delete_btn);
 
+            if (dataGridView1.Columns["Detalhar"] is null)
+                dataGridView1.Columns.Add(detalhe_btn);
+
             dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.CancelEdit();
         }
         #endregion
 
@@ -154,8 +163,11 @@ namespace DemoCRUD.View
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == dataGridView1.Columns["Delete"].Index)
+            if(e.ColumnIndex == dataGridView1.Columns["Remover"].Index)
                 excluirCliente((int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+
+            else if (e.ColumnIndex == dataGridView1.Columns["Detalhar"].Index)
+                detalharCliente((int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
         }
 
         private void excluirCliente(int id)
@@ -165,6 +177,14 @@ namespace DemoCRUD.View
             AcaoComum();
 
             CarregarListView();
+        }
+
+        private void detalharCliente(int id)
+        {
+            AcaoComum();
+
+            var detalhe = new Detalhe(clientes.First(x => x.Id == id));
+            detalhe.ShowDialog();
         }
     }
 }
