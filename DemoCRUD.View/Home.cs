@@ -49,9 +49,15 @@ namespace DemoCRUD.View
             clientes = service.RecuperarTodos();
             dataGridView1.DataSource = clientes;
 
-            dataGridView1.Columns[4].DisplayIndex = 0;
-            dataGridView1.Columns[0].DisplayIndex = 1;
-            dataGridView1.Columns[1].DisplayIndex = 2;
+            var delete_btn = new DataGridViewButtonColumn();
+            delete_btn.Name = "Delete";
+            delete_btn.Text = "X";
+            delete_btn.UseColumnTextForButtonValue = true;
+
+            if (dataGridView1.Columns["Delete"] is null)
+                dataGridView1.Columns.Add(delete_btn);
+
+            dataGridView1.Columns["Id"].Visible = false;
         }
         #endregion
 
@@ -75,7 +81,6 @@ namespace DemoCRUD.View
             btnNovo.Enabled = !inserir && !alterar;
             btnAlterar.Enabled = !inserir && !alterar;
             btnExibir.Enabled = !inserir && !alterar;
-            btnExcluir.Enabled = !inserir && !alterar;
             btnSalvar.Enabled = inserir || alterar;
             btnCancelar.Enabled = inserir || alterar;
         }
@@ -141,15 +146,6 @@ namespace DemoCRUD.View
             detalhe.ShowDialog();
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            service.Deletar(cliente.Id);
-
-            AcaoComum();
-
-            CarregarListView();
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             AcaoComum();
@@ -168,6 +164,21 @@ namespace DemoCRUD.View
             //txtNome.Text = cliente.Nome;
             //txtCpf.Text = cliente.Cpf;
             //txtNascimento.Text = cliente.DataNascimento.ToString("dd/MM/yyyy");
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == dataGridView1.Columns["Delete"].Index)
+                excluirCliente((int)dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
+        }
+
+        private void excluirCliente(int id)
+        {
+            service.Deletar(id);
+
+            AcaoComum();
+
+            CarregarListView();
         }
     }
 }

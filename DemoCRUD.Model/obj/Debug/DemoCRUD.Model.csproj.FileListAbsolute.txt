@@ -10,3 +10,9 @@ D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.
 D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.csproj.CoreCompileInputs.cache
 D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.dll
 D:\_personal\udemy-course-win-forms\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.pdb
+C:\src\github\demo-crud\DemoCRUD.Model\bin\Debug\DemoCRUD.Model.dll
+C:\src\github\demo-crud\DemoCRUD.Model\bin\Debug\DemoCRUD.Model.pdb
+C:\src\github\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.csproj.AssemblyReference.cache
+C:\src\github\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.csproj.CoreCompileInputs.cache
+C:\src\github\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.dll
+C:\src\github\demo-crud\DemoCRUD.Model\obj\Debug\DemoCRUD.Model.pdb
